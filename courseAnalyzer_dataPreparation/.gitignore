@@ -1,0 +1,8 @@
+﻿data/
+analysis.log
+__pycache__/
+*.py[cod]
+models/all-MiniLM-L6-v2/
+models/reference_embeddings.npy
+frontend/node_modules/
+frontend/dist/

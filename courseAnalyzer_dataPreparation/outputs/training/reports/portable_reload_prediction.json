@@ -1,0 +1,16 @@
+[
+  {
+    "review_text": "The flavour is excellent and I would buy it again.",
+    "cleaned_text": "The flavour is excellent and I would buy it again.",
+    "classifier": "linear_svm",
+    "predicted_label": "negative",
+    "class_scores": null
+  },
+  {
+    "review_text": "This product was disappointing and poor quality.",
+    "cleaned_text": "This product was disappointing and poor quality.",
+    "classifier": "linear_svm",
+    "predicted_label": "negative",
+    "class_scores": null
+  }
+]

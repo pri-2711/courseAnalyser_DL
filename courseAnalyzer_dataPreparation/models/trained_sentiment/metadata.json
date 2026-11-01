@@ -1,0 +1,96 @@
+{
+  "selected_model": "linear_svm",
+  "default_classifier": "linear_svm",
+  "best_traditional_classifier": "linear_svm",
+  "classifier_files": {
+    "mlp": "mlp/mlp_classifier.pt",
+    "linear_svm": "classifier.joblib"
+  },
+  "selected_model_path": "D:\\university\\year4\\DL\\DL-project\\courseAnalyzer_dataPreparation\\models\\trained_sentiment\\classifier.joblib",
+  "selected_by": "highest validation macro F1 among supervised classifiers; weighted F1 breaks ties",
+  "trained_classifier": {
+    "C": 1.0,
+    "class_weight": "balanced",
+    "dual": "auto",
+    "fit_intercept": true,
+    "intercept_scaling": 1,
+    "loss": "squared_hinge",
+    "max_iter": 5000,
+    "multi_class": "ovr",
+    "penalty": "l2",
+    "random_state": 42,
+    "tol": 0.0001,
+    "verbose": 0
+  },
+  "sbert_model_id": "sentence-transformers/all-MiniLM-L6-v2",
+  "sbert_package_version": "6.1.0",
+  "label_mapping": {
+    "negative": [
+      1,
+      2
+    ],
+    "neutral": [
+      3
+    ],
+    "positive": [
+      4,
+      5
+    ]
+  },
+  "preprocessing": {
+    "text_field": "review_clean (or recognized review text field)",
+    "text_cleanup": "HTML removal, HTML entity decoding, whitespace collapse, strip",
+    "duplicate_key": "SHA-256 of cleaned, case-folded, whitespace-normalized review text",
+    "rating_labels": {
+      "negative": [
+        1,
+        2
+      ],
+      "neutral": [
+        3
+      ],
+      "positive": [
+        4,
+        5
+      ]
+    }
+  },
+  "training_dataset_fingerprint_sha256": "ecaa3ccf142681d164f297f83ddb34641ffbf11279a1281c4bda18a9422b177e",
+  "split": {
+    "seed": 42,
+    "method": "two-stage StratifiedGroupKFold(n_splits=5, shuffle=True)",
+    "group_key": "normalized review text SHA-256",
+    "sizes": {
+      "train": 251528,
+      "validation": 62882,
+      "test": 78603
+    },
+    "fractions": {
+      "train": 0.64,
+      "validation": 0.16,
+      "test": 0.2
+    },
+    "class_counts": {
+      "train": {
+        "positive": 196072,
+        "negative": 36449,
+        "neutral": 19007
+      },
+      "validation": {
+        "negative": 9113,
+        "positive": 49017,
+        "neutral": 4752
+      },
+      "test": {
+        "positive": 61273,
+        "neutral": 5939,
+        "negative": 11391
+      }
+    }
+  },
+  "evaluation_label_source": "rating-derived weak labels; not verified sentiment ground truth",
+  "training_timestamp_utc": "2026-11-01T01:17:29.190003+00:00",
+  "embedding_cache_path": "D:\\university\\year4\\DL\\DL-project\\courseAnalyzer_dataPreparation\\data\\training_cache\\ecaa3ccf142681d164f297f83ddb34641ffbf11279a1281c4bda18a9422b177e_e9e2c8815f70.npy",
+  "embedding_cache_reused": true,
+  "model_type": "trained linear classifier over frozen SBERT embeddings"
+}

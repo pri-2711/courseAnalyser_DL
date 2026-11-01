@@ -1,0 +1,14 @@
+{
+  "python": "3.12.2 (tags/v3.12.2:6abddd9, Feb  6 2024, 21:26:36) [MSC v.1937 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "numpy": "2.5.4",
+    "pandas": "2.2.2",
+    "scikit-learn": "1.8.0",
+    "joblib": "1.5.3",
+    "torch": "2.14.1",
+    "sentence-transformers": "6.1.0",
+    "transformers": "5.16.1",
+    "matplotlib": "3.9.2"
+  }
+}

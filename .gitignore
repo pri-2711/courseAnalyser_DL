@@ -1,0 +1,47 @@
+@'
+# Python environments
+**/.venv/
+**/venv/
+**/env/
+
+# Python cache
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+
+# Node and frontend dependencies
+**/node_modules/
+**/dist/
+**/.vite/
+
+# Environment variables and secrets
+**/.env
+**/.env.*
+!**/.env.example
+
+# IDE and OS files
+**/.idea/
+**/.vscode/
+**/.DS_Store
+**/Thumbs.db
+
+# Logs and temporary files
+**/*.log
+**/tmp/
+**/temp/
+
+# Local databases
+**/*.sqlite
+**/*.sqlite3
+**/*.db
+
+# Course Analyzer temporary/generated data
+courseAnalyzer_dataPreparation/data/input/
+courseAnalyzer_dataPreparation/data/training_cache/
+courseAnalyzer_dataPreparation/data/persisted/
+
+# Generated archives
+**/*.zip
+'@ | Set-Content -Encoding utf8 .gitignore

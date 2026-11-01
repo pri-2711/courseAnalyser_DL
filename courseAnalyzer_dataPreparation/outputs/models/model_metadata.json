@@ -1,0 +1,53 @@
+{
+  "package_format": 2,
+  "model_id": "all-MiniLM-L6-v2",
+  "default_classifier": "linear_svm",
+  "classifier_files": {
+    "linear_svm": "sentiment_model.joblib",
+    "mlp": "mlp/mlp_classifier.pt"
+  },
+  "classifier_categories": {
+    "linear_svm": "Traditional Machine Learning",
+    "mlp": "Deep Learning (supervised PyTorch MLP)"
+  },
+  "paths": {
+    "classifier": "sentiment_model.joblib",
+    "mlp": "mlp",
+    "encoder": "sbert_model",
+    "reference_embeddings": "reference_embeddings.npy"
+  },
+  "label_mapping": {
+    "negative": [
+      1,
+      2
+    ],
+    "neutral": [
+      3
+    ],
+    "positive": [
+      4,
+      5
+    ]
+  },
+  "preprocessing": {
+    "text_field": "review_clean (or recognized review text field)",
+    "text_cleanup": "HTML removal, HTML entity decoding, whitespace collapse, strip",
+    "duplicate_key": "SHA-256 of cleaned, case-folded, whitespace-normalized review text",
+    "rating_labels": {
+      "negative": [
+        1,
+        2
+      ],
+      "neutral": [
+        3
+      ],
+      "positive": [
+        4,
+        5
+      ]
+    }
+  },
+  "embedding_batch_size": 256,
+  "training_label_source": "rating-derived weak labels; not verified sentiment ground truth",
+  "relative_paths_only": true
+}

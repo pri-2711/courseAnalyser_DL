@@ -1,0 +1,61 @@
+{
+  "source": "D:\\university\\year4\\DL\\DL-project\\courseAnalyzer_dataPreparation\\data\\input\\reviews.json",
+  "dataset_fingerprint_sha256": "ecaa3ccf142681d164f297f83ddb34641ffbf11279a1281c4bda18a9422b177e",
+  "row_count": 568453,
+  "columns": [
+    "_id",
+    "platform",
+    "review_clean",
+    "rating"
+  ],
+  "rating_distribution": {
+    "1": 52268,
+    "2": 29769,
+    "3": 42640,
+    "4": 80655,
+    "5": 363121
+  },
+  "rating_missing_count": 0,
+  "rating_non_numeric_count": 0,
+  "rating_out_of_range_count": 0,
+  "rating_in_range_unmapped_count": 0,
+  "valid_rating_count": 568453,
+  "text_missing_count": 0,
+  "text_empty_after_cleaning_count": 0,
+  "text_length_mean": 409.9,
+  "text_length_median": 286.0,
+  "text_length_at_most_20_count": 19,
+  "text_length_over_5000_count": 213,
+  "duplicate_text_rows_after_first": 175415,
+  "unique_nonempty_normalized_texts": 393038,
+  "weak_label_counts_before_deduplication": {
+    "negative": 82037,
+    "neutral": 42640,
+    "positive": 443776
+  },
+  "existing_sentiment_label_columns": [],
+  "course_or_user_group_fields": [],
+  "rating_label_definition": {
+    "negative": [
+      1,
+      2
+    ],
+    "neutral": [
+      3
+    ],
+    "positive": [
+      4,
+      5
+    ]
+  },
+  "weak_label_caveat": "Labels are derived from ratings and are not verified sentiment ground truth.",
+  "duplicate_text_groups_with_conflicting_weak_labels": 50,
+  "ambiguous_tied_label_groups_excluded_from_training": 25,
+  "unique_weak_labeled_examples": 393013,
+  "weak_label_counts_after_duplicate_collapse": {
+    "positive": 306362,
+    "negative": 56953,
+    "neutral": 29698
+  },
+  "duplicate_handling": "Use one example per normalized review text; majority rating-derived label wins. Text groups tied across labels are excluded from supervised fitting, and remain untouched in the source."
+}

@@ -1,0 +1,1 @@
+-r courseAnalyzer_dataPreparation/requirements.txt

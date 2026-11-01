@@ -1,0 +1,85 @@
+{
+  "run_at": "2026-11-01T15:04:07",
+  "app": "http://127.0.0.1:5173",
+  "api": "http://127.0.0.1:8000",
+  "results": [
+    {
+      "workflow": "1. User registration",
+      "result": "PASS",
+      "evidence": "registered browser-20261101150340@example.test; dashboard visible"
+    },
+    {
+      "workflow": "2. Login and authentication (logout + login)",
+      "result": "PASS",
+      "evidence": "signed out, then signed in again with the same credentials"
+    },
+    {
+      "workflow": "3. Dashboard navigation",
+      "result": "PASS",
+      "evidence": "Model Evaluation page opened from the sidebar"
+    },
+    {
+      "workflow": "4-6. Course URL submission, Coursera metadata and actual review retrieval",
+      "result": "PASS",
+      "evidence": "Coursera: Reviews found: 20 | Retrieved: 20 | Analyzed: 20 | Skipped: 0"
+    },
+    {
+      "workflow": "11. Sentiment analysis (per-model breakdown)",
+      "result": "PASS",
+      "evidence": "model tabs: MLP default; Linear SVM; SBERT reference | selected by default: MLP default"
+    },
+    {
+      "workflow": "UI: default MLP tab, course layout order, rating chart, model switching",
+      "result": "PASS",
+      "evidence": "default tab: MLP default; overview above summary cards; rating chart visible; switched to Linear SVM"
+    },
+    {
+      "workflow": "10. Duplicate submission prevention",
+      "result": "PASS",
+      "evidence": "resubmitting the same URL kept 1 course record(s), one for this URL"
+    },
+    {
+      "workflow": "7. freeCodeCamp URL extraction",
+      "result": "PASS",
+      "evidence": "freeCodeCamp article: metadata shown as success (no reviews, not an error)"
+    },
+    {
+      "workflow": "8. Generic educational URL extraction",
+      "result": "PASS",
+      "evidence": "W3Schools tutorial panel: Course extraction Resource: Introduction to Python · resource · W3Schools ✓ Fetching course page ✓ Extracting course information – Retrieving student reviews – Saving reviews – Running sentiment analysis ✓ Updating dashboard Reviews found: 0 Retrieved: 0 Analy"
+    },
+    {
+      "workflow": "Failed extraction is clearly displayed",
+      "result": "PASS",
+      "evidence": "Udemy (robots.txt 403): panel shows 'Extraction failed' with the reason"
+    },
+    {
+      "workflow": "12. Course Recommendations section",
+      "result": "PASS",
+      "evidence": "2 results; top: 'Programming for Everybody (Getting Started with Python)' -> https://www.coursera.org/learn/python; empty query button disabled"
+    },
+    {
+      "workflow": "15. CSV review upload",
+      "result": "PASS",
+      "evidence": "CSV uploaded from an open course and analysed"
+    },
+    {
+      "workflow": "13-14. Model Training and Evaluation page, comparison table and graphs",
+      "result": "PASS",
+      "evidence": "4 model rows, 8 evaluation graphs rendered; 'Selected model' absent"
+    },
+    {
+      "workflow": "17. Comparison of two courses (different platforms, zero reviews, missing rating)",
+      "result": "PASS",
+      "evidence": "2 course cards, 6 insights, no ranking language; zero-review course handled"
+    },
+    {
+      "workflow": "16. Logout",
+      "result": "PASS",
+      "evidence": "logged out to the sign-in page"
+    }
+  ],
+  "console_errors": [
+    "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+  ]
+}
